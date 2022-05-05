@@ -1,0 +1,48 @@
+{
+	"name": "mars-rover",
+	"version": "1.0.0",
+	"description": "Mars Rover Challenge",
+	"main": "src/index.mjs",
+	"scripts": {
+		"start": "node ./src/index.mjs",
+		"test": "jest",
+		"format": "prettier --write \"./**/*.{js, json}\""
+	},
+	"author": "Ruan Strydom",
+	"license": "ISC",
+	"files": [
+		"src/index.mjs",
+		"src/classes/*",
+		"src/utils/*"
+	],
+	"type": "module",
+	"devDependencies": {
+		"@babel/preset-env": "^7.17.10",
+		"jest": "^28.0.3",
+		"prettier": "^2.6.2"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"mjs",
+			"js",
+			"jsx",
+			"ts",
+			"tsx",
+			"json",
+			"node"
+		],
+		"testMatch": [
+			"**/?(*.)tests.?js"
+		],
+		"testPathIgnorePatterns": [
+			"/node_modules/",
+			"/cypress/"
+		],
+		"transform": {
+			"^.+\\.m?js$": "babel-jest"
+		},
+		"transformIgnorePatterns": [
+			"\\.pnp\\.[^\\/]+$"
+		]
+	}
+}
